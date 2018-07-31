@@ -1,5 +1,25 @@
-<h1>You added</h1>
+<h1><%= @cocktail.name %></h1>
 
-<p><%= @cocktail.name %></p>
+<ul>
+  <% @cocktail.ingredients.each do |ingredient| %>
+  <li>
+    <%= ingredient.name %>
+  </li>
+  <% end %>
+</ul>
+
+<ul>
+  <% @cocktail.doses.each do |dose| %>
+  <li>
+    <%= dose.description %>
+  </li>
+  <% end %>
+</ul>
+
 
 <p><%= link_to "Add doses", new_cocktail_dose_path(@cocktail) %></p>
+
+<p><%= link_to "Back to cocktail list", cocktails_path %></p>
+
+<p> <%= link_to "Delete this cocktail", cocktail_path(@cocktail),
+ data: {:confirm => 'Are you sure?'}, :method => :delete %> </p>
