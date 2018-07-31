@@ -1,1 +1,11 @@
+<h1>What's the recipe ?</h1>
 
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+
+  <%= f.association :ingredient %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.submit %>
+<% end %>
