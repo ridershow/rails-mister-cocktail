@@ -19,6 +19,11 @@ gem 'webpacker'
 # gem 'mini_racer', platforms: :ruby
 
 gem 'simple_form'
+gem 'bootstrap-sass'
+gem 'font-awesome-sass', '~> 5.0.9'
+gem 'simple_form'
+gem 'autoprefixer-rails'
+gem 'jquery-rails'
 
 
 # Use CoffeeScript for .coffee assets and views
